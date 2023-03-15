@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+var personel = [
+
+{ adi: "Umut", dogum: 1994, maas: 4000, devam: false },
+
+{ adi: "Neşe", dogum: 1989, maas: 4000, devam: true },
+
+{ adi: "Sevgi", dogum: 1985, maas: 4000, devam: true },
+
+{ adi: "Nehir", dogum: 1985, maas: 4000, devam: false },
+
+{ adi: "Derya", dogum: 1980, maas: 4000, devam: false },
+
+{ adi: "Ümit", dogum: 1998, maas: 4000, devam: true },
+
+{ adi: "Akın", dogum: 1988, maas: 4000, devam: false },
+
+{ adi: "Bulut", dogum: 1987, maas: 4000, devam: true },
+
+{ adi: "Deniz", dogum: 1998, maas: 4000, devam: false },
+
+];
+for (var i = 0; i < personel.length; i++) {
+if (!personel[i].devam) {
+  personel[i] = {};
+}
+}
+var yas = new Date().getFullYear();
+for (var i = 0; i < personel.length; i++) {
+if (yas - personel[i].dogum > 30) {
+  personel[i].maas *= 1.20;
+} else if (yas - personel[i].dogum < 30) {
+  personel[i].maas *= 1.05;
+}
+}
+var temp;
+for (var i = 0; i < personel.length; i++) {
+for (var k = i + 1; k < personel.length; k++) {
+  if (personel[i].maas < personel[k].maas) {
+    temp = personel[i];
+    personel[i] = personel[k];
+    personel[k] = temp;
+  }
+}
+}
+console.log(personel);
+    </script>
+</body>
+</html>

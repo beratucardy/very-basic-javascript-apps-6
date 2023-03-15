@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+while (devam != 0) {
+  var sayi1 = Number(prompt("Lütfen birinci sayıyı giriniz"));
+  var sayi2 = Number(prompt("Lütfen ikinci sayıyı giriniz"));
+  var secim = prompt("Lütfen 4 işlemden birisini seçiniz. Yazım şekli: Toplama, Çıkarma, Çarpma, Bölme");
+  var devam;
+  var sonuc = Number(sonuc);
+  function dortIslem() {
+    if (secim == "Toplama") {
+      sonuc = sayi1 + sayi2;
+      alert("Girilen sayılar: " + sayi1 + " , " + sayi2 + "\n" + "İşlemin sonucu: " + sonuc);
+    }
+    else if (secim == "Çıkarma") {
+      sonuc = (sayi1 - sayi2);
+      alert("Girilen sayılar: " + sayi1 + " , " + sayi2 + "\n" + "İşlemin sonucu: " + sonuc);
+    }
+    else if (secim == "Çarpma") {
+      sonuc = sayi1 * sayi2;
+      alert("Girilen sayılar: " + sayi1 + " , " + sayi2 + "\n" + "İşlemin sonucu: " + sonuc);
+    }
+    else if (secim == "Bölme") {
+      sonuc = sayi1 / sayi2;
+      alert("Girilen sayılar: " + sayi1 + " , " + sayi2 + "\n" + "İşlemin sonucu: " + sonuc);
+    }
+    else {
+      alert("Lütfen yazım şekline dikkat ederek tekrar deneyiniz");
+    }
+    return alert;
+  }
+  dortIslem();
+  devam = Number(prompt("Devam etmek isterseniz 1'e, programı sonlandırmak isterseniz 0'a basınız"));
+}  
+    </script>
+</body>
+</html>

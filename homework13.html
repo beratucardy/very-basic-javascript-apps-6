@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+let sayiArr = [231, 45, 675, 89, 76, 345, 145, 278, 98, 203, 430]
+function ortalama(arr) {
+  var toplam = 0;
+  for (var i = 0; i < arr.length; i++) {
+    toplam += arr[i];
+  }
+  return toplam / arr.length;
+}
+console.log(ortalama(sayiArr));
+function compare(a, b) {
+  if (a > b) return 1;
+  if (a == b) return 0;
+  if (a < b) return -1;
+}
+sayiArr.sort(compare);
+sayiArr.reverse(compare);
+for (var i = 0; i < sayiArr.length; i++) {
+  if (sayiArr[i] < ortalama(sayiArr)) {
+    sayiArr[i] = [];
+  }
+}
+console.log((ortalama(sayiArr) * 11) / 4);
+for (var k = 0; k < sayiArr.length; k++) {
+  if (sayiArr[k] < (ortalama(sayiArr) * 11) / 4) {
+    sayiArr[k] = [];
+  }
+}
+console.log(sayiArr);
+    </script>
+</body>
+</html>

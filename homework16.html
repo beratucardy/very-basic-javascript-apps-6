@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+var metin = prompt("Bir metin giriniz");
+var metinUzunluk = Number(metin.length);
+console.log("Girilen metin: " + metin + " Girilen metnin uzunluğu: " + metinUzunluk);
+var sonuc = 1;
+function faktoriyel(sayi) {
+  for (var i = sayi; i >= 1; i--) {
+    sonuc *= i;
+  }
+  return sonuc;
+}
+var f = faktoriyel(metinUzunluk)
+console.log("Girilen metnin faktöriyeli: " + f);
+var dizi = [];
+var val;
+for (var k = 1; k <= f; k++) {
+  if (k % 4 == 0) {
+    val += dizi.push(k);
+  }
+}
+console.log("0'dan çıkan sonuca kadar 4'ün katı olan sayıların dizisi: ", dizi);       
+    </script>
+</body>
+</html>
